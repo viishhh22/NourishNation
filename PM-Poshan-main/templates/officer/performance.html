@@ -1,0 +1,45 @@
+{% extends "officer/base.html" %}
+
+{% block files %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/performance.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/officer/graph.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='scripts/officer/performance.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main1.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+        <input type="text" name="school" id="school-search" class="school-search" placeholder="Search School"
+        style="margin: 5% 10%; width: 50%;">
+        <div class="card" id="Total">
+            <span class="num">1239</span>
+            <span class="title">Total Students</span>
+        </div>
+        <div class="card" id="Underweight">
+            <span class="num">238</span>
+            <span class="title">Underweight</span>
+        </div>
+        <div class="card" id="Overweight">
+            <span class="num">38</span>
+            <span class="title">Overweight</span>
+        </div>
+        <div class="card" id="Stunted">
+            <span class="num">56</span>
+            <span class="title">Stunted</span>
+        </div>
+        <div class="card" id="Wasted">
+            <span class="num">45</span>
+            <span class="title">Wasted</span>
+        </div>
+        <div class="card" id="Medically Intervened">
+            <span class="num">120</span>
+            <span class="title">Medically Intervened</span>
+        </div>
+    </div>
+
+    <div id="graph">
+    </div>
+
+
+{% endblock %}
